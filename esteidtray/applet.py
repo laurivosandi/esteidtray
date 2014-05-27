@@ -12,6 +12,13 @@ import gtk
 import gobject
 gobject.threads_init()
 
+
+DBUS_SCREENSAVERS = (
+    ("org.gnome.ScreenSaver",         "/org/gnome/ScreenSaver"),
+    ("org.freedesktop.ScreenSaver",   "/ScreenSaver"),
+    ("org.mate.ScreenSaver",          "/ScreenSaver")
+)
+
 PCSCD = "/usr/sbin/pcscd"
 QESTEIDUTIL = "/usr/bin/qesteidutil"
 
@@ -152,9 +159,9 @@ class SmartcardApplet():
             print "This should not happen"
             
         if self.lock_screen.get_active():
-            for dbus_name in ("org.gnome.ScreenSaver", "org.freedesktop.ScreenSaver", "org.mate.ScreenSaver"):
+            for dbus_name, dbus_path in DBUS_SCREENSAVERS:
                 try:
-                    screensaver = self.session_bus.get_object(dbus_name, "/ScreenSaver")
+                    screensaver = self.session_bus.get_object(dbus_name, dbus_path)
                 except dbus.exceptions.DBusException:
                     print "No such DBus object:", dbus_name
                     continue
@@ -165,7 +172,7 @@ class SmartcardApplet():
         #            interface.Lock()
                     msg = dbus.lowlevel.MethodCallMessage(
                         destination=dbus_name,
-                        path="/ScreenSaver",
+                        path=dbus_path,
                         interface=dbus_name,
                         method='Lock')
                     # Don't expect for reply, at least mate-screensaver does
