@@ -1,0 +1,3 @@
+#!/usr/bin/python
+from esteidtray.applet import entry_point
+entry_point()

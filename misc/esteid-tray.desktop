@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=esteid-tray
+Comment=ID-card applet
+Comment[et]=ID-kaardi rakend
+Exec=esteid-tray
+Terminal=false
+Type=Application
+NoDisplay=true
