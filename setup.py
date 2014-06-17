@@ -8,7 +8,7 @@ setup(
     author=u"Lauri Võsandi",
     author_email="lauri.vosandi@gmail.com",
     url="http://bitbucket.org/lauri.vosandi/esteidtray",
-    version='0.2',
+    version='0.3',
     packages=['esteidtray',],
     package_data={"esteidtray":["icons/*"]},
     data_files=[

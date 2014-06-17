@@ -17,23 +17,34 @@ Features
 * Card reader add and remove
 * Smartcard insertion, removing and hot reset
 * Lock screen via DBus
+* The applet is automatically launched via /etc/xdg/autostart
+
+
+Install
+-------
+
+Simply issue following:
+
+.. code::
+
+    sudo pip install esteidtray
 
 
 TODO
 ----
 
+* Ubuntu hides tray icons, some sort of new API has to be used there
 * Unlock screen, possibly not required because of already existing PAM modules
 * Better debuggin capabilities, eg. is pcscd running?
 * Use pykcs11 to read certificate and warn user if the certificate is about to expire
-* Create .desktop file for autostart
-* Create pip installable package
-* Debianize the package and set it as dependency for estonianidcard at packages.koodur.com
+* Debianize the package and set it as dependency for estonianidcard at http://packages.koodur.com
 
 
 Author
 ------
 
 `Lauri Võsandi <mailto:lauri.vosandi@gmail.com>`_ created this nifty piece of code.
+
 
 License
 -------
