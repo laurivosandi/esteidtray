@@ -15,7 +15,7 @@ Features
 
 * Event driven architecture, no naive polling
 * Card reader add and remove
-* Smartcard insertion, removing and mode switching
+* Smartcard insertion, removing and hot reset
 * Lock screen via DBus
 
 
@@ -38,7 +38,7 @@ Author
 License
 -------
 
-Copyright (c) 2014 Lauri Võsandi <lauri.vosandi@gmail.com>
+Copyright (c) 2014 `Lauri Võsandi <lauri.vosandi@gmail.com>`_
 This work is free. You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To Public License, Version 2,
 as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
